@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  
+}
+
+#container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.img-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.img-wrapper:nth-child(2) {
+  clip-path: inset(0px 0px 0px 50%);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: .1rem;
+  height: 100%;
+  background-color: #000000;
+}
+
+input {
+  /* reset */
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  /* custom */
+  position: absolute;
+  width: calc(100% + 2.25rem);
+  height: 100%;
+  left: -1.125rem;
+}
+
+input::-webkit-slider-thumb {
+  /* reset */
+  -webkit-appearance: none;
+  appearance: none;
+  /* custom */
+  height: 2.5rem;
+  width: 2.5rem;
+  border: .2rem solid #000;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+  background-color: #000;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="-2 1 18 6" fill="none"><path d="M10.8086 7.14648C10.5039 7.47656 9.9707 7.47656 9.66602 7.14648C9.33594 6.8418 9.33594 6.30859 9.66602 6.00391L10.707 4.9375H3.26758L4.30859 6.00391C4.63867 6.30859 4.63867 6.8418 4.30859 7.14648C4.00391 7.47656 3.4707 7.47656 3.16602 7.14648L0.728516 4.70898C0.398438 4.4043 0.398438 3.87109 0.728516 3.56641L3.16602 1.12891C3.4707 0.798828 4.00391 0.798828 4.30859 1.12891C4.63867 1.43359 4.63867 1.9668 4.30859 2.27148L3.26758 3.3125H10.707L9.66602 2.27148C9.33594 1.9668 9.33594 1.43359 9.66602 1.12891C9.9707 0.798828 10.5039 0.798828 10.8086 1.12891L13.2461 3.56641C13.5762 3.87109 13.5762 4.4043 13.2461 4.70898L10.8086 7.14648Z" fill="%23ffffff"/></svg>');
+  background-size: cover;
+  cursor: grab;
+}
+
+
+input::-moz-range-thumb {
+  height: 2.25rem;
+  width: 2.25rem;
+  border: .25rem solid #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 height%3D%2224px%22 viewBox%3D%220 -960 960 960%22 width%3D%2224px%22 fill%3D%22%23000%22%3E%3Cpath d%3D%22M286.15-293.85 100-479.62l185.77-185.76 42.15 41.76-113 113.62h530.16l-113-113.62 42.15-41.76L860-479.62 674.23-293.85l-42.54-41.77 113.39-114H214.54l113.38 114-41.77 41.77Z%22/%3E%3C/svg%3E');
+  background-size: cover;
+  cursor: grab;
+}
+
+input:active::-webkit-slider-thumb {
+  cursor: grabbing;
+}
+
+input:active::-moz-slider-thumb {
+  cursor: grabbing;
+}
+
